@@ -5,6 +5,6 @@
   row-gap: 0.1rem;
 
   @include respond(phone) {
-    grid-template-rows: 50vh 40vh 50vh 40vh;
+    grid-template-rows: 50vh 50vh 50vh 50vh;
   }
 }

@@ -163,7 +163,7 @@ body {
   row-gap: 0.1rem; }
   @media (max-width: 37.5em) {
     .container {
-      grid-template-rows: 50vh 40vh 50vh 40vh; } }
+      grid-template-rows: 50vh 50vh 50vh 50vh; } }
 
 .hero-img {
   grid-column: 1/10;
