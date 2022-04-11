@@ -90,6 +90,9 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
   color: #630a10; }
+  @media (max-width: 37.5em) {
+    .navbar__link:link, .navbar__link:visited {
+      font-size: 2.4rem; } }
 
 .navbar__link:hover, .navbar__link:active {
   border-bottom: 2px solid #630a10; }
@@ -259,13 +262,16 @@ body {
   transition: all 800ms; }
   @media (max-width: 37.5em) {
     .navbar {
-      font-size: 60%; } }
+      gap: 5rem; } }
   .navbar:hover {
     opacity: 100%; }
   .navbar__logo {
     font-size: 8rem;
     color: #630a10;
     fill: #630a10; }
+    @media (max-width: 37.5em) {
+      .navbar__logo {
+        font-size: 10rem; } }
   .navbar__btn {
     text-decoration: none;
     font-size: 1.6rem;

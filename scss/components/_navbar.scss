@@ -1,7 +1,4 @@
 .navbar {
-  @include respond(phone) {
-    font-size: 60%;
-  }
   width: 100vw;
   display: flex;
   position: fixed;
@@ -13,7 +10,9 @@
   align-items: center;
   opacity: 80%;
   transition: all 800ms;
-
+  @include respond(phone) {
+    gap: 5rem;
+  }
   &:hover {
     opacity: 100%;
   }
@@ -22,6 +21,9 @@
     font-size: 8rem;
     color: $color-primary;
     fill: $color-primary;
+    @include respond(phone) {
+      font-size: 10rem;
+    }
   }
 
   &__btn {
