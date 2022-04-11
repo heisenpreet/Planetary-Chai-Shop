@@ -20,7 +20,7 @@
   @include respond(phone) {
     grid-column: 1/-1;
     grid-row: 2/2;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 20% 80%;
   }
 
   &__header {
@@ -31,7 +31,7 @@
     align-self: end;
     justify-self: center;
     @include respond(phone) {
-      align-self: start;
+      align-self: center;
     }
   }
 

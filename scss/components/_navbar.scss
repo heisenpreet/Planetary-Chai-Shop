@@ -34,7 +34,7 @@
 
   &__btn {
     @include respond(phone) {
-      display: none;
+      display: none !important;
     }
   }
 }

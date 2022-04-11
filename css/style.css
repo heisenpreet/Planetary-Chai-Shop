@@ -191,7 +191,7 @@ body {
     .hero {
       grid-column: 1/-1;
       grid-row: 2/2;
-      grid-template-rows: 15% 85%; } }
+      grid-template-rows: 20% 80%; } }
   .hero__header {
     grid-column: 1/-1;
     grid-row: 1/1;
@@ -199,7 +199,7 @@ body {
     justify-self: center; }
     @media (max-width: 37.5em) {
       .hero__header {
-        align-self: start; } }
+        align-self: center; } }
   .hero__btn {
     display: block; }
   .hero__para {
@@ -281,7 +281,7 @@ body {
       display: none; } }
   @media (max-width: 37.5em) {
     .navbar__btn {
-      display: none; } }
+      display: none !important; } }
 
 .btn {
   text-decoration: none;
