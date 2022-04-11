@@ -230,6 +230,7 @@ body {
     justify-self: center; }
     @media (max-width: 37.5em) {
       .icetea__section h2 {
+        margin-top: 2rem;
         align-self: end; } }
   .icetea__section p {
     grid-column: 1/-1;
