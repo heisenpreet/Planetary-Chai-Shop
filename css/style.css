@@ -126,7 +126,7 @@ body {
   white-space: normal;
   text-align: center;
   color: #630a10;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   letter-spacing: 0.8px; }
   @media (max-width: 75em) {
     .para-1 {
@@ -183,28 +183,25 @@ body {
   background-color: #fcf0c8;
   display: grid;
   grid-template-columns: repeat(10, 10%);
-  grid-template-rows: 50% 35% 15%;
+  grid-template-rows: 30% 70%;
   justify-content: center;
-  align-content: center; }
+  align-content: center;
+  padding: 3rem; }
   @media (max-width: 37.5em) {
     .hero {
       grid-column: 1/-1;
       grid-row: 2/2; } }
   .hero__header {
-    padding: 1rem;
-    padding-bottom: 3rem;
     grid-column: 1/-1;
     grid-row: 1/1;
     align-self: end;
     justify-self: center; }
   .hero__btn {
-    grid-row: 3/3;
-    align-self: start;
-    grid-column: 5/7; }
+    display: block; }
   .hero__para {
     grid-column: 1/-1;
     grid-row: 2/2;
-    align-self: start;
+    align-self: center;
     justify-self: center; }
 
 .icetea__img {
@@ -262,7 +259,7 @@ body {
   transition: all 800ms; }
   @media (max-width: 37.5em) {
     .navbar {
-      gap: 5rem; } }
+      gap: 4.5rem; } }
   .navbar:hover {
     opacity: 100%; }
   .navbar__logo {

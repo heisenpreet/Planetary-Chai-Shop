@@ -13,17 +13,18 @@
   background-color: $color-background;
   display: grid;
   grid-template-columns: repeat(10, 10%);
-  grid-template-rows: 50% 35% 15%;
+  grid-template-rows: 30% 70%;
   justify-content: center;
   align-content: center;
+  padding: 3rem;
   @include respond(phone) {
     grid-column: 1/-1;
     grid-row: 2/2;
   }
 
   &__header {
-    padding: 1rem;
-    padding-bottom: 3rem;
+    // padding: 1rem;
+    // padding-bottom: 3rem;
     grid-column: 1/-1;
     grid-row: 1/1;
     align-self: end;
@@ -31,15 +32,13 @@
   }
 
   &__btn {
-    grid-row: 3/3;
-    align-self: start;
-    grid-column: 5/7;
+    display: block;
   }
 
   &__para {
     grid-column: 1/-1;
     grid-row: 2/2;
-    align-self: start;
+    align-self: center;
     justify-self: center;
   }
 }
