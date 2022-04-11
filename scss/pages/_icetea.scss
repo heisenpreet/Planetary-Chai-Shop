@@ -24,6 +24,9 @@
       grid-row: 1/1;
       align-self: center;
       justify-self: center;
+      @include respond(phone) {
+        align-self: end;
+      }
     }
     p {
       grid-column: 1/-1;
@@ -31,7 +34,7 @@
       justify-self: center;
       align-self: start;
       @include respond(phone) {
-        align-self: end;
+        align-self: center;
       }
     }
 

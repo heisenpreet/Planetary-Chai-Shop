@@ -228,6 +228,9 @@ body {
     grid-row: 1/1;
     align-self: center;
     justify-self: center; }
+    @media (max-width: 37.5em) {
+      .icetea__section h2 {
+        align-self: end; } }
   .icetea__section p {
     grid-column: 1/-1;
     grid-row: 2/2;
@@ -235,7 +238,7 @@ body {
     align-self: start; }
     @media (max-width: 37.5em) {
       .icetea__section p {
-        align-self: end; } }
+        align-self: center; } }
   @media (max-width: 37.5em) {
     .icetea__section {
       grid-column: 1/-1;
