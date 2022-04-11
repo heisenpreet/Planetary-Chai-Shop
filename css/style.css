@@ -230,7 +230,6 @@ body {
     justify-self: center; }
     @media (max-width: 37.5em) {
       .icetea__section h2 {
-        margin-top: 9.6rem;
         align-self: end; } }
   .icetea__section p {
     grid-column: 1/-1;
@@ -244,7 +243,7 @@ body {
     .icetea__section {
       grid-column: 1/-1;
       grid-row: 4/4;
-      grid-template-rows: 10% 90%; } }
+      grid-template-rows: 15% 85%; } }
 
 .navbar {
   width: 100vw;
@@ -258,6 +257,9 @@ body {
   align-items: center;
   opacity: 80%;
   transition: all 800ms; }
+  @media (max-width: 37.5em) {
+    .navbar {
+      font-size: 60%; } }
   .navbar:hover {
     opacity: 100%; }
   .navbar__logo {

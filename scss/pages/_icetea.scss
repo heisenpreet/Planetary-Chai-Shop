@@ -25,7 +25,6 @@
       align-self: center;
       justify-self: center;
       @include respond(phone) {
-        margin-top: 9.6rem;
         align-self: end;
       }
     }
@@ -42,7 +41,7 @@
     @include respond(phone) {
       grid-column: 1/-1;
       grid-row: 4/4;
-      grid-template-rows: 10% 90%;
+      grid-template-rows: 15% 85%;
     }
   }
 }

@@ -1,4 +1,7 @@
 .navbar {
+  @include respond(phone) {
+    font-size: 60%;
+  }
   width: 100vw;
   display: flex;
   position: fixed;
