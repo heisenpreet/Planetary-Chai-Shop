@@ -190,12 +190,16 @@ body {
   @media (max-width: 37.5em) {
     .hero {
       grid-column: 1/-1;
-      grid-row: 2/2; } }
+      grid-row: 2/2;
+      grid-template-rows: 15% 85%; } }
   .hero__header {
     grid-column: 1/-1;
     grid-row: 1/1;
     align-self: end;
     justify-self: center; }
+    @media (max-width: 37.5em) {
+      .hero__header {
+        align-self: start; } }
   .hero__btn {
     display: block; }
   .hero__para {
@@ -203,6 +207,9 @@ body {
     grid-row: 2/2;
     align-self: center;
     justify-self: center; }
+    @media (max-width: 37.5em) {
+      .hero__para {
+        align-self: start; } }
 
 .icetea__img {
   width: 100%;
@@ -269,28 +276,29 @@ body {
     @media (max-width: 37.5em) {
       .navbar__logo {
         font-size: 10rem; } }
-  .navbar__btn {
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    color: #630a10;
-    padding: 0.5rem 2rem;
-    border: 1px solid #630a10;
-    border-radius: 5rem;
-    display: inline-block;
-    text-align: center;
-    transition: all 300ms; }
-    @media (max-width: 37.5em) {
-      .navbar__btn {
-        display: none; } }
-  .navbar__btn-full {
-    color: #fff;
-    background-color: #5c3d2e; }
-    .navbar__btn-full:hover {
-      background-color: #402b20; }
-  .navbar__btn-empty:hover {
-    background-color: #fbd38c; }
   @media (max-width: 37.5em) {
     .navbar__contact {
       display: none; } }
+  @media (max-width: 37.5em) {
+    .navbar__btn {
+      display: none; } }
+
+.btn {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #630a10;
+  padding: 0.5rem 2rem;
+  border: 1px solid #630a10;
+  border-radius: 5rem;
+  display: inline-block;
+  text-align: center;
+  transition: all 300ms; }
+  .btn-full {
+    color: #fff;
+    background-color: #5c3d2e; }
+    .btn-full:hover {
+      background-color: #402b20; }
+  .btn-empty:hover {
+    background-color: #fbd38c; }
