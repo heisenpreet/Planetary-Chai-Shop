@@ -295,6 +295,9 @@ body {
   display: inline-block;
   text-align: center;
   transition: all 300ms; }
+  @media (max-width: 37.5em) {
+    .btn {
+      font-size: 2.4rem; } }
   .btn-full {
     color: #fff;
     background-color: #5c3d2e; }
