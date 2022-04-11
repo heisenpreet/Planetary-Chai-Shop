@@ -1,0 +1,65 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-grey-dark;
+}
+//300 400 500 700 900
+//"Cutive Mono"
+
+.navbar {
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    font-family: "josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-primary;
+  }
+
+  &__link:hover,
+  &__link:active {
+    border-bottom: 2px solid $color-primary;
+  }
+
+  &__contact:link,
+  &__contact:visited {
+    margin-left: auto;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: $color-primary;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  &__contact-icon {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-primary;
+    fill: $color-primary;
+  }
+}
+
+.heading-1 {
+  color: $color-primary;
+  font-family: "Grape Nuts", sans-serif;
+  font-size: 5.5rem;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  white-space: normal;
+  @include respond(tab-land) {
+    font-size: 5rem;
+  }
+}
+.para-1 {
+  white-space: normal;
+  text-align: center;
+  color: $color-primary;
+  font-size: 2.4rem;
+  letter-spacing: 0.8px;
+
+  @include respond(tab-land) {
+    font-size: 2rem;
+  }
+}

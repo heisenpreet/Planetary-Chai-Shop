@@ -1,0 +1,45 @@
+.hero-img {
+  grid-column: 1/10;
+  grid-row: 1/1;
+  width: 100%;
+  @include respond(phone) {
+    grid-column: 1/-1;
+    grid-row: 1/1;
+  }
+}
+.hero {
+  grid-column: 10/-1;
+  grid-row: 1/1;
+  background-color: $color-background;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: 50% 35% 15%;
+  justify-content: center;
+  align-content: center;
+  @include respond(phone) {
+    grid-column: 1/-1;
+    grid-row: 2/2;
+  }
+
+  &__header {
+    padding: 1rem;
+    padding-bottom: 3rem;
+    grid-column: 1/-1;
+    grid-row: 1/1;
+    align-self: end;
+    justify-self: center;
+  }
+
+  &__btn {
+    grid-row: 3/3;
+    align-self: start;
+    grid-column: 5/7;
+  }
+
+  &__para {
+    grid-column: 1/-1;
+    grid-row: 2/2;
+    align-self: start;
+    justify-self: center;
+  }
+}

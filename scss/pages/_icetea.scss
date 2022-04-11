@@ -1,0 +1,38 @@
+.icetea {
+  &__img {
+    width: 100%;
+    grid-column: 10/-1;
+    grid-row: 2/2;
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 3/3;
+    }
+  }
+  &__section {
+    grid-column: 1/10;
+    grid-row: 2/2;
+    background-color: $color-background;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: 20% 40%;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem;
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 4/4;
+    }
+    h2 {
+      grid-column: 1/-1;
+      grid-row: 1/1;
+      align-self: center;
+      justify-self: center;
+    }
+    p {
+      grid-column: 1/-1;
+      grid-row: 2/2;
+      justify-self: center;
+      align-self: start;
+    }
+  }
+}
