@@ -230,7 +230,7 @@ body {
     justify-self: center; }
     @media (max-width: 37.5em) {
       .icetea__section h2 {
-        margin-top: 2rem;
+        margin-top: 9.6rem;
         align-self: end; } }
   .icetea__section p {
     grid-column: 1/-1;
@@ -276,6 +276,9 @@ body {
     display: inline-block;
     text-align: center;
     transition: all 300ms; }
+    @media (max-width: 37.5em) {
+      .navbar__btn {
+        display: none; } }
   .navbar__btn-full {
     color: #fff;
     background-color: #5c3d2e; }
@@ -283,3 +286,6 @@ body {
       background-color: #402b20; }
   .navbar__btn-empty:hover {
     background-color: #fbd38c; }
+  @media (max-width: 37.5em) {
+    .navbar__contact {
+      display: none; } }
