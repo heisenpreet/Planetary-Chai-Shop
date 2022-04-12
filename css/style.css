@@ -184,6 +184,7 @@ body {
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: 30% 70%;
+  row-gap: 0.5rem;
   justify-content: center;
   align-content: center;
   padding: 3rem; }
