@@ -355,7 +355,6 @@ body {
   grid-column: 18/-1;
   grid-row: 4/4;
   background-color: #face7f;
-  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -380,6 +379,9 @@ body {
       .spicy__content-3 {
         grid-column: 1/-1;
         grid-row: 12/12; } }
+  @media (max-width: 37.5em) {
+    .spicy__content {
+      padding: 3rem 0; } }
   .spicy__content h2,
   .spicy__content p {
     color: #630a10 !important; }
