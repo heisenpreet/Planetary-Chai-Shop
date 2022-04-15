@@ -1,0 +1,64 @@
+.drink-1 {
+  grid-column: 1 / 21;
+  grid-row: 3/3;
+  padding-right: 1.5rem;
+  @include respond(phone) {
+    grid-column: 1/-1;
+    grid-row: 5/5;
+  }
+}
+.drink-2 {
+  grid-column: 21/-1;
+  grid-row: 3/3;
+  padding-left: 1.5rem;
+  @include respond(phone) {
+    grid-column: 1/-1;
+    grid-row: 6/6;
+  }
+}
+.drink {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: min-content max-content;
+  justify-content: center;
+
+  padding-top: 3rem;
+  @include respond(phone) {
+    padding: 0;
+  }
+  &__img {
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/1;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    height: 40rem;
+    background-image: linear-gradient(
+      to left top,
+      #402218,
+      #462015,
+      #4d1d13,
+      #531a11,
+      #5a1510,
+      #5b1210,
+      #5d0f10,
+      #5e0b10,
+      #5a0c10,
+      #560d0f,
+      #530d0f,
+      #4f0e0e
+    );
+    grid-column: 1/-1;
+    grid-row: 2/2;
+  }
+
+  &__btn {
+    border: 1px solid currentColor !important;
+    &:hover {
+      color: $color-primary !important;
+    }
+  }
+}

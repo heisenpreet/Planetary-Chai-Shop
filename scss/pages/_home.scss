@@ -1,5 +1,5 @@
 .hero-img {
-  grid-column: 1/10;
+  grid-column: 1/21;
   grid-row: 1/1;
   width: 100%;
   @include respond(phone) {
@@ -8,7 +8,7 @@
   }
 }
 .hero {
-  grid-column: 10/-1;
+  grid-column: 21/-1;
   grid-row: 1/1;
   background-color: $color-background;
   display: grid;
