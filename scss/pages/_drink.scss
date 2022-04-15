@@ -25,7 +25,7 @@
   padding-top: 3rem;
   @include respond(phone) {
     padding: 0;
-    border-bottom: 4rem solid $color-background;
+    border-bottom: 5rem solid $color-background;
   }
   &__img {
     width: 100%;
