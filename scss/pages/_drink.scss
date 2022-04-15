@@ -23,6 +23,7 @@
   justify-content: center;
 
   padding-top: 3rem;
+  padding-bottom: 3rem;
   @include respond(phone) {
     padding: 0;
     border-bottom: 5rem solid $color-background;
