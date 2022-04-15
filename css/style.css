@@ -306,7 +306,8 @@ body {
   padding-top: 3rem; }
   @media (max-width: 37.5em) {
     .drink {
-      padding: 0; } }
+      padding: 0;
+      border-bottom: 4rem solid #fcf0c8; } }
   .drink__img {
     width: 100%;
     grid-column: 1/-1;
