@@ -1,7 +1,7 @@
 {
-  "name": "webinar-reg",
+  "name": "Planetary-Chai-Shop",
   "version": "1.0.0",
-  "description": "Landing page for webinar",
+  "description": "Planetary_Chai_Shop",
   "main": "script.js",
   "scripts": {
     "compile:sass": "node-sass scss/main.scss css/style.css -w",
