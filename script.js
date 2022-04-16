@@ -1,14 +1,7 @@
+"use strict";
+
 const weekday = document.querySelector(".weekday");
 const month = document.querySelector(".month");
-
-weekday.textContent = new Intl.DateTimeFormat(navigator.language, {
-  weekday: "long",
-}).format(new Date());
-
-month.textContent = new Intl.DateTimeFormat(navigator.language, {
-  month: "long",
-}).format(new Date());
-
 const navbarBtn = document.querySelectorAll(".form-btn");
 const body = document.querySelector(".body");
 const overlay = document.querySelector(".overlay");
@@ -18,13 +11,23 @@ const popupbtn = document.querySelector(".popup__btn");
 const timeleft = document.querySelector(".Welcome-msg__timeleft");
 const Welcome = document.querySelector(".Welcome-msg");
 
-const msg = function () {
+weekday.textContent = new Intl.DateTimeFormat(navigator.language, {
+  weekday: "long",
+}).format(new Date());
+
+month.textContent = new Intl.DateTimeFormat(navigator.language, {
+  month: "long",
+}).format(new Date());
+
+const welcomeMsg = function () {
   let timer = 5;
   const startTimer = () => {
     setInterval(() => {
       if (timer > 0) {
         timer--;
         timeleft.textContent = String(timer).padStart(2, 0);
+      } else {
+        clearInterval();
       }
     }, 1500);
   };
@@ -40,7 +43,8 @@ const msg = function () {
   }, 9000);
 };
 
-msg();
+welcomeMsg();
+
 const showClose = function () {
   body.classList.toggle("inactive");
   overlay.classList.toggle("hidden");
