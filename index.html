@@ -25,7 +25,7 @@
     <script src="script.js" defer></script>
     <title>Planetary Chai Shop</title>
   </head>
-  <body class="body inactive">
+  <body class="body">
     <nav class="navbar">
       <i class="las la-cookie-bite navbar__logo"></i>
       <a href="#" class="navbar__link">Menu</a>
@@ -34,8 +34,8 @@
       <a href="#" class="navbar__contact"
         ><i class="las la-map-marker-alt navbar__contact-icon"></i> Locate us</a
       >
-      <a href="#" class="navbar__btn btn-empty btn">Sign in</a>
-      <a href="#" class="navbar__btn btn-full btn">Join Now </a>
+      <a href="#" class="navbar__btn btn-empty btn form-btn">Sign in</a>
+      <a href="#" class="navbar__btn btn-full btn form-btn">Join Now </a>
     </nav>
     <div class="container">
       <img
@@ -94,7 +94,7 @@
             Spring sips await with our nondairy Pink Drink, complete with real
             strawberry pieces and coconutmilk.
             <br /><br />
-            <a href="#" class="drink__btn btn btn-empty">Order now </a>
+            <a href="#" class="drink__btn btn btn-empty form-btn">Order now </a>
           </p>
         </div>
       </section>
@@ -109,7 +109,7 @@
           Our Spinach, Feta & Egg White Wrap offers a meatless way to seize the
           day.
           <br /><br />
-          <a href="#" class="drink__btn btn btn-empty">Order now </a>
+          <a href="#" class="drink__btn btn btn-empty form-btn">Order now </a>
         </p>
       </section>
       <section class="spicy__content spicy__content-2">
@@ -118,7 +118,7 @@
           Our spicy french fries, Feta & Egg White Wrap offers a meatless way to
           seize the day.
           <br /><br />
-          <a href="#" class="drink__btn btn btn-empty">Order now </a>
+          <a href="#" class="drink__btn btn btn-empty form-btn">Order now </a>
         </p>
       </section>
       <img
@@ -137,12 +137,12 @@
           Delicious, handcrafted beverages and great-tasting food. The secret to
           making life better.
           <br /><br />
-          <a href="#" class="drink__btn btn btn-empty">Order now </a>
+          <a href="#" class="drink__btn btn btn-empty form-btn">Order now </a>
         </p>
       </section>
     </div>
     <div class="overlay hidden"></div>
-    <div class="popup-left">
+    <div class="popup-left hidden">
       <h2>Create an account</h2>
       <h3>Planetary Chai shop® REWARDS</h3>
       <p>
@@ -152,7 +152,8 @@
       </p>
     </div>
 
-    <div id="signup" class="popup">
+    <div id="signup" class="popup hidden">
+      <a href="#"> <i class="lar la-times-circle popup__btn"></i></a>
       <form action="" class="popup__form">
         <label for="name" class="personal">Personal Information</label>
         <input

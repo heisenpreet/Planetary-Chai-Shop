@@ -6,6 +6,8 @@
   background-color: rgba(243, 226, 230, 0.9);
   backdrop-filter: blur(3px);
   z-index: 10;
+
+  transition: all 200ms;
 }
 
 .inactive {
@@ -16,5 +18,8 @@
 }
 
 .hidden {
-  //   display: none;
+  display: none !important;
+  visibility: hidden !important;
+  width: 5rem !important;
+  height: 5rem !important;
 }
