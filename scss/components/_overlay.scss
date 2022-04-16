@@ -20,6 +20,25 @@
 .hidden {
   display: none !important;
   visibility: hidden !important;
-  width: 5rem !important;
-  height: 5rem !important;
+  width: 0 !important;
+  height: 0 !important;
+  z-index: 0 !important;
+}
+
+.Welcome-msg {
+  @include absolute-center;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  &__para {
+    text-align: left;
+  }
+  &__timeleft {
+    font-size: 5rem;
+    font-weight: 600;
+  }
 }
