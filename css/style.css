@@ -465,6 +465,7 @@ body {
   z-index: 0 !important; }
 
 .Welcome-msg {
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -489,11 +490,6 @@ body {
   .Welcome-msg p {
     font-size: 2rem;
     color: #343a40; }
-  .Welcome-msg__para {
-    text-align: left; }
-    @media (max-width: 37.5em) {
-      .Welcome-msg__para {
-        text-align: center; } }
   .Welcome-msg__timeleft {
     font-size: 5rem !important;
     font-weight: 600; }

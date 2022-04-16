@@ -26,6 +26,7 @@
 }
 
 .Welcome-msg {
+  width: 80%;
   @include absolute-center;
   z-index: 20;
   display: flex;
@@ -50,12 +51,7 @@
     font-size: 2rem;
     color: $color-grey-dark;
   }
-  &__para {
-    text-align: left;
-    @include respond(phone) {
-      text-align: center;
-    }
-  }
+
   &__timeleft {
     font-size: 5rem !important;
     font-weight: 600;
