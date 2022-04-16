@@ -43,6 +43,9 @@
       font-size: 2.6rem;
       font-weight: 600;
       letter-spacing: 0.5px;
+      @include respond(phone) {
+        font-size: 2.7;
+      }
     }
 
     h3 {
@@ -51,9 +54,13 @@
       color: $color-grey-light;
       letter-spacing: 1.5px;
       font-weight: 600;
+      @include respond(phone) {
+        font-size: 1.6rem;
+      }
     }
 
     p {
+      font-size: 1.6rem;
       width: 50ch;
       color: $color-grey-dark;
       margin-top: 2rem;
@@ -72,7 +79,7 @@
       border-radius: 1rem;
       background-color: $color-white-honeydew-1;
       border: none;
-      width: 80%;
+      width: 85%;
       margin-bottom: 2rem;
       &::placeholder {
         color: $color-primary;
@@ -80,12 +87,12 @@
         font-weight: 400;
         letter-spacing: 1px;
 
-        opacity: 40%;
+        opacity: 50%;
       }
     }
     &-name {
       display: inline-block !important;
-      width: 40% !important;
+      width: 42.5% !important;
     }
 
     label {
