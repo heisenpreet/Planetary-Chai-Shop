@@ -26,18 +26,18 @@ const msg = function () {
         timer--;
         timeleft.textContent = String(timer).padStart(2, 0);
       }
-    }, 1000);
+    }, 1500);
   };
 
   setTimeout(() => {
     startTimer();
-  }, 1500);
+  }, 1000);
 
   setTimeout(() => {
     overlay.classList.toggle("hidden");
     Welcome.classList.toggle("hidden");
     body.classList.toggle("inactive");
-  }, 8000);
+  }, 9000);
 };
 
 msg();
