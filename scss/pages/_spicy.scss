@@ -5,6 +5,8 @@
       grid-column: 1/18;
       grid-row: 4/4;
 
+      overflow: auto;
+      resize: both;
       @include respond(phone) {
         grid-column: 1/-1;
         grid-row: 7/7;
