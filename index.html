@@ -25,7 +25,7 @@
     <script src="script.js" defer></script>
     <title>Planetary Chai Shop</title>
   </head>
-  <body>
+  <body class="body inactive">
     <nav class="navbar">
       <i class="las la-cookie-bite navbar__logo"></i>
       <a href="#" class="navbar__link">Menu</a>
@@ -140,6 +140,57 @@
           <a href="#" class="drink__btn btn btn-empty">Order now </a>
         </p>
       </section>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="popup-left">
+      <h2>Create an account</h2>
+      <h3>Planetary Chai shop® REWARDS</h3>
+      <p>
+        Join Planetary Chai shop Rewards to earn Stars for free food and drinks,
+        any way you pay. Get access to mobile ordering, a birthday Reward, and
+        more.
+      </p>
+    </div>
+
+    <div id="signup" class="popup">
+      <form action="" class="popup__form">
+        <label for="name" class="personal">Personal Information</label>
+        <input
+          class="popup__form-name"
+          required
+          name="name"
+          type="text"
+          placeholder="*First name"
+        />
+        <input
+          class="popup__form-name"
+          required
+          name="name"
+          type="text"
+          placeholder="*Last name"
+        />
+        <label for="account" class="account">Account</label>
+        <input
+          required
+          name="account"
+          type="email"
+          placeholder="*email address"
+        />
+        <input
+          required
+          name="account"
+          type="password"
+          placeholder="*Password"
+        />
+        <p class="popup__form-para">TERMS OF USE</p>
+        <input required type="checkbox" class="popup__form-checkbox" />
+        <label class="popup__form-terms" for="terms"
+          >I agree to the Planetary Chai Shop® Rewards Terms and the Card Terms
+        </label>
+        <button type="submit" class="btn btn-full popup__form-btn">
+          Sign up
+        </button>
+      </form>
     </div>
   </body>
 </html>

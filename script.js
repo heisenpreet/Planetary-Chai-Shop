@@ -1,16 +1,10 @@
 const weekday = document.querySelector(".weekday");
 const month = document.querySelector(".month");
 
-const now = new Date();
-const options = {
+weekday.textContent = new Intl.DateTimeFormat(navigator.language, {
   weekday: "long",
-};
-const locale = "en-US";
-weekday.textContent = new Intl.DateTimeFormat(locale, options).format(now);
+}).format(new Date());
 
-const now1 = new Date();
-const options1 = {
+month.textContent = new Intl.DateTimeFormat(navigator.language, {
   month: "long",
-};
-
-month.textContent = new Intl.DateTimeFormat(locale, options1).format(now1);
+}).format(new Date());

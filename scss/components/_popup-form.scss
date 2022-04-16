@@ -1,0 +1,124 @@
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -50%);
+
+  @include respond(phone) {
+    top: 55%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+
+  z-index: 20;
+  background-color: #ffffff;
+
+  border-radius: 2rem;
+  padding: 3rem;
+
+  box-shadow: 0px 11px 8px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 11px 8px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 11px 8px 2px rgba(0, 0, 0, 0.4);
+
+  &-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(10%, -50%);
+    z-index: 20;
+
+    @include respond(phone) {
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h2 {
+      color: $color-primary;
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: $color-grey-light;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    p {
+      width: 50ch;
+      color: $color-grey-dark;
+      margin-top: 2rem;
+    }
+  }
+
+  &__form {
+    margin: 0 auto;
+    input {
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+
+      display: block;
+      padding: 2rem 2rem;
+      border-radius: 1rem;
+      background-color: $color-white-honeydew-1;
+      border: none;
+      width: 80%;
+      margin-bottom: 2rem;
+      &::placeholder {
+        color: $color-primary;
+        font-size: 1.8rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+
+        opacity: 40%;
+      }
+    }
+    &-name {
+      display: inline-block !important;
+      width: 40% !important;
+    }
+
+    label {
+      display: block;
+      color: $color-primary;
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    &-terms {
+      color: $color-primary !important;
+      font-size: 1.4rem !important;
+      font-weight: 300 !important;
+      display: inline !important;
+    }
+    &-checkbox {
+      display: inline-block !important;
+      width: min-content !important;
+      margin: 2rem 0;
+      margin-bottom: 0 !important;
+    }
+    &-para {
+      font-size: 1.4rem;
+      color: $color-primary;
+      letter-spacing: 1px;
+    }
+
+    &-btn {
+      display: block !important;
+      border: none !important;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+    }
+  }
+}
