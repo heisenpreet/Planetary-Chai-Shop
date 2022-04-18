@@ -11,6 +11,12 @@ const popupbtn = document.querySelector(".popup__btn");
 const timeleft = document.querySelector(".Welcome-msg__timeleft");
 const Welcome = document.querySelector(".Welcome-msg");
 
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//passing month and day
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
 weekday.textContent = new Intl.DateTimeFormat(navigator.language, {
   weekday: "long",
 }).format(new Date());
@@ -18,6 +24,12 @@ weekday.textContent = new Intl.DateTimeFormat(navigator.language, {
 month.textContent = new Intl.DateTimeFormat(navigator.language, {
   month: "long",
 }).format(new Date());
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//WELCOME MESSGAGE
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
 
 let messageTimer;
 const welcomeMsg = function () {
@@ -46,6 +58,12 @@ const welcomeMsg = function () {
 
 welcomeMsg();
 
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//POPUP FORM FUNCTIONS
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
 const showClose = function () {
   body.classList.toggle("inactive");
   overlay.classList.toggle("hidden");
@@ -64,12 +82,14 @@ document.addEventListener("keydown", function (esc) {
   }
 });
 
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
 //CREATING AN DOM BUTTON TO SKIP THE WELCOME MESSAGE
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
 
 const skipButton = document.createElement("a");
-skipButton.classList.add("btn");
-skipButton.classList.add("btn-full");
-skipButton.classList.add("Welcome-msg__btn");
+skipButton.classList.add("btn", "btn-full", "Welcome-msg__btn");
 skipButton.textContent = `Skip`;
 
 //Inserting the dom button at the welcome class
@@ -84,3 +104,5 @@ document
     Welcome.classList.toggle("hidden");
     body.classList.toggle("inactive");
   });
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
