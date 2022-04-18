@@ -59,4 +59,9 @@
       font-size: 7rem !important;
     }
   }
+
+  &__btn {
+    width: min-content !important;
+    margin: 0 auto;
+  }
 }
