@@ -106,3 +106,25 @@ document
   });
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+//SMOOTH SCROLLING FOR NAV LINKS
+//using event delegation here , rather than putting a event listener to each navlink, we put the event listener to the common parent of the nav links
+//CASE 1 EVENT DELEGATION
+//STEPS:-
+//1. Add event listner to common parent element
+//2. Determine which element originated the event
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+const navbar = document.querySelector(".navbar"); //selecting the entire navbar
+
+navbar.addEventListener("click", function (e) {
+  //Matching stretegy to check if the the elemtn contains our class or not
+  if (e.target.classList.contains("navbar__link")) {
+    e.preventDefault();
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
