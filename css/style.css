@@ -498,8 +498,9 @@ body {
         .tabbed__text h2,
         .tabbed__text p {
           text-align: center !important; } }
-    .tabbed__text p {
-      width: 30ch; }
+    @media (max-width: 37.5em) {
+      .tabbed__text p {
+        width: 35ch; } }
 
 .navbar {
   width: 100vw;

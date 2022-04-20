@@ -33,7 +33,7 @@ month.textContent = new Intl.DateTimeFormat(navigator.language, {
 
 let messageTimer;
 const welcomeMsg = function () {
-  let timer = 5;
+  let timer = 10;
   const startTimer = () => {
     setInterval(() => {
       if (timer > 0) {
@@ -42,18 +42,18 @@ const welcomeMsg = function () {
       } else {
         clearInterval();
       }
-    }, 1500);
+    }, 1000);
   };
 
   setTimeout(() => {
     startTimer();
-  }, 1000);
+  }, 800);
 
   messageTimer = setTimeout(() => {
     overlay.classList.toggle("hidden");
     Welcome.classList.toggle("hidden");
     body.classList.toggle("inactive");
-  }, 9000); //IMPORTANT CHANGE TO 9000
+  }, 11300); //IMPORTANT CHANGE TO 9000
 };
 
 welcomeMsg();

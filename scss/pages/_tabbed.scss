@@ -163,8 +163,8 @@
 
     p {
       @include respond(phone) {
+        width: 35ch;
       }
-      width: 30ch;
     }
   }
 }
