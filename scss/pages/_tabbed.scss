@@ -5,7 +5,7 @@
 
   @include respond(phone) {
     grid-row: 13/13;
-    height: 70vh;
+    height: 90vh;
   }
   background-image: linear-gradient(
     to left top,
@@ -38,23 +38,9 @@
     align-self: center;
     height: max-content;
     @include respond(phone) {
-      height: 85%;
+      height: 60vh;
     }
-    background-image: linear-gradient(
-      to right bottom,
-      #b5fe83,
-      #c6fe88,
-      #d5fe8e,
-      #e3fe95,
-      #effe9d,
-      #f1fea7,
-      #f4ffb1,
-      #f6ffbb,
-      #f2ffc7,
-      #f1ffd3,
-      #f0ffdf,
-      #f2ffe9
-    );
+    background-color: $color-cream-dark;
 
     border-radius: 1rem;
 
@@ -70,6 +56,9 @@
 
     &-icon {
       font-size: 2.7rem;
+      @include respond(phone) {
+        font-size: 4rem;
+      }
     }
     &-text {
       margin-right: 0.8rem;
@@ -130,6 +119,10 @@
     justify-items: center;
     align-items: start;
     gap: 2rem;
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-row: min-content 1fr;
+    }
 
     &-box-hidden {
       display: none;
@@ -141,12 +134,21 @@
     font-size: 6rem;
     grid-column: 1/1;
     grid-row: 1/1;
+    @include respond(phone) {
+      grid-column: 1/1;
+      grid-row: 1/1;
+    }
   }
 
   &__text {
     grid-column: 2/2;
     hyphens: auto;
     grid-row: 1/1;
+    @include respond(phone) {
+      grid-column: 1/1;
+      grid-row: 2/2;
+      text-align: center !important;
+    }
 
     h2,
     p {
@@ -154,6 +156,15 @@
       text-align: left !important;
       margin-top: 2rem;
       width: auto;
+      @include respond(phone) {
+        text-align: center !important;
+      }
+    }
+
+    p {
+      @include respond(phone) {
+      }
+      width: 30ch;
     }
   }
 }
