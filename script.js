@@ -140,8 +140,19 @@ navbar.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 
 const tabButtons = document.querySelectorAll(".tabbed__button"); //each tab button
+const firstButton = document.querySelector(".tabbed__buttons-1");
+
 const tabContainer = document.querySelector(".tabbed__buttons"); //container of buttons
 const tabContent = document.querySelectorAll(".tabbed__content"); //content boxex
+
+let bttn = firstButton;
+const giggleBtn = (btn) => {
+  btn.classList.toggle("tabbed__buttons-active"); // making the button move
+};
+
+const tabmov = setInterval(() => {
+  giggleBtn(bttn);
+}, 900);
 
 //using event delegation on tabContainer
 
@@ -150,11 +161,12 @@ tabContainer.addEventListener("click", function (e) {
   if (!clicked) return; //Gurad Clause for null
 
   //tabs
+
   tabButtons.forEach((element) => {
     element.classList.remove("tabbed__buttons-active"); //removing from all
   });
   clicked.classList.add("tabbed__buttons-active"); // adding in one
-
+  bttn = clicked;
   // content;
   tabContent.forEach((element) => {
     element.classList.add("tabbed__content-box-hidden");
@@ -162,5 +174,4 @@ tabContainer.addEventListener("click", function (e) {
   document
     .querySelector(`.content-box-${clicked.dataset.tab}`)
     .classList.remove("tabbed__content-box-hidden");
-  console.log(clicked.dataset.tab);
 });
