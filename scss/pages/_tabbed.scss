@@ -37,6 +37,9 @@
     justify-self: center;
     align-self: center;
     height: max-content;
+    @include respond(phone) {
+      height: 85%;
+    }
     background-image: linear-gradient(
       to right bottom,
       #b5fe83,

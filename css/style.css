@@ -413,6 +413,9 @@ body {
     @media (max-width: 37.5em) {
       .tabbed__container {
         grid-column: 3 / 19; } }
+    @media (max-width: 37.5em) {
+      .tabbed__container {
+        height: 85%; } }
   .tabbed__buttons {
     transform: translateY(-50%);
     display: flex;
