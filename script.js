@@ -128,3 +128,32 @@ navbar.addEventListener("click", function (e) {
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+//Tabbed Component
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+const tabButtons = document.querySelectorAll(".tabbed__button"); //each tab button
+const tabContainer = document.querySelector(".tabbed__buttons"); //container of buttons
+const tabContent = document.querySelectorAll(".tabbed__content"); //content boxex
+
+//using event delegation on tabContainer
+
+tabContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".tabbed__button"); //will return the entire btn and not the child els of button
+  if (!clicked) return; //Gurad Clause for null
+
+  //tabs
+  tabButtons.forEach((element) => {
+    element.classList.remove("tabbed__buttons-active"); //removing from all
+  });
+  clicked.classList.add("tabbed__buttons-active"); // adding in one
+
+  // content;
+  tabContent.forEach((element) => {
+    element.classList.add("tabbed__content-box-hidden");
+  });
+  document
+    .querySelector(`.content-box-${clicked.dataset.tab}`)
+    .classList.remove("tabbed__content-box-hidden");
+  console.log(clicked.dataset.tab);
+});
