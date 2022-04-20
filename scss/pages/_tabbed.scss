@@ -30,6 +30,7 @@
   align-content: center;
 
   &__container {
+    margin-top: 10rem;
     grid-column: 4 / 18;
     @include respond(phone) {
       grid-column: 3 / 19;
@@ -57,7 +58,7 @@
     &-icon {
       font-size: 2.7rem;
       @include respond(phone) {
-        font-size: 4rem;
+        font-size: 4.5rem;
       }
     }
     &-text {
