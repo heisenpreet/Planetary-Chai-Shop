@@ -149,9 +149,9 @@ const giggleBtn = (btn) => {
   btn.classList.toggle("tabbed__buttons-active"); // making the button move
 };
 
-const tabmov = setInterval(() => {
-  giggleBtn(bttn);
-}, 900);
+// const tabmov = setInterval(() => {
+//   giggleBtn(bttn);
+// }, 900);
 
 //using event delegation on tabContainer
 
@@ -181,7 +181,7 @@ tabContainer.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 
 const hoverfade = function (e) {
-  if (e.target.classList.contains("navbar-cl-fade")) {
+  if (e.target.classList.contains("navbar__link")) {
     const navClFade = e.target;
 
     //seraching for all other siblings of e.target
@@ -196,3 +196,31 @@ const hoverfade = function (e) {
 
 navbar.addEventListener("mouseover", hoverfade.bind(0.5));
 navbar.addEventListener("mouseout", hoverfade.bind(1));
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//Intersection observer API
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+const tabbed = document.querySelector(".tabbed");
+let tabmov;
+const obsCallback = function (entrires) {
+  entrires.forEach((element) => {
+    if (element.isIntersecting) {
+      tabmov = setInterval(() => {
+        giggleBtn(bttn);
+      }, 900);
+    }
+    if (!element.isIntersecting) {
+      clearInterval(tabmov);
+    }
+  });
+};
+
+const obsOptions = {
+  root: null,
+  threshold: 0.1,
+};
+
+const observer = new IntersectionObserver(obsCallback, obsOptions);
+observer.observe(tabbed);

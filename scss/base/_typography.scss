@@ -16,7 +16,8 @@ body {
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 600;
-    transition: opacity 700ms;
+    transition: opacity 700ms, transform 200ms;
+    transition-timing-function: ease-out;
     color: $color-primary;
     @include respond(phone) {
       font-size: 2.5rem;
@@ -26,6 +27,7 @@ body {
   &__link:hover,
   &__link:active {
     border-bottom: 2px solid $color-primary;
+    transform: scale(1.01);
   }
 
   &__contact:link,
