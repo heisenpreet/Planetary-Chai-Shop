@@ -10,6 +10,7 @@ const popupleft = document.querySelector(".popup-left");
 const popupbtn = document.querySelector(".popup__btn");
 const timeleft = document.querySelector(".Welcome-msg__timeleft");
 const Welcome = document.querySelector(".Welcome-msg");
+const navbar = document.querySelector(".navbar");
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -122,8 +123,6 @@ document
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
-const navbar = document.querySelector(".navbar"); //selecting the entire navbar
-
 navbar.addEventListener("click", function (e) {
   //Matching stretegy to check if the the elemtn contains our class or not
   if (e.target.classList.contains("navbar__link")) {
@@ -175,3 +174,25 @@ tabContainer.addEventListener("click", function (e) {
     .querySelector(`.content-box-${clicked.dataset.tab}`)
     .classList.remove("tabbed__content-box-hidden");
 });
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//nav elements fabe
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+const hoverfade = function (e) {
+  if (e.target.classList.contains("navbar-cl-fade")) {
+    const navClFade = e.target;
+
+    //seraching for all other siblings of e.target
+    const navSiblings = navClFade
+      .closest(".navbar")
+      .querySelectorAll(".navbar__link");
+    navSiblings.forEach((element) => {
+      if (element != navClFade) element.style.opacity = this;
+    });
+  }
+};
+
+navbar.addEventListener("mouseover", hoverfade.bind(0.5));
+navbar.addEventListener("mouseout", hoverfade.bind(1));

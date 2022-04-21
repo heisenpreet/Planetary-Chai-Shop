@@ -16,6 +16,7 @@ body {
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 600;
+    transition: opacity 700ms;
     color: $color-primary;
     @include respond(phone) {
       font-size: 2.5rem;
