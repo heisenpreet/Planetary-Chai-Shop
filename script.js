@@ -33,6 +33,7 @@ month.textContent = new Intl.DateTimeFormat(navigator.language, {
 /////////////////////////////////////////////////
 
 let messageTimer;
+let timerRunning = false;
 const welcomeMsg = function () {
   // This prevents the page from scrolling down to where it was previously.
   if ("scrollRestoration" in history) {
@@ -61,6 +62,7 @@ const welcomeMsg = function () {
     overlay.classList.toggle("hidden");
     Welcome.classList.toggle("hidden");
     body.classList.toggle("inactive");
+    timerRunning = true;
   }, 11300); //IMPORTANT CHANGE TO 9000
 };
 
@@ -73,10 +75,12 @@ welcomeMsg();
 /////////////////////////////////////////////////
 
 const showClose = function () {
-  body.classList.toggle("inactive");
-  overlay.classList.toggle("hidden");
-  popup.classList.toggle("hidden");
-  popupleft.classList.toggle("hidden");
+  if (timerRunning) {
+    body.classList.toggle("inactive");
+    overlay.classList.toggle("hidden");
+    popup.classList.toggle("hidden");
+    popupleft.classList.toggle("hidden");
+  }
 };
 
 navbarBtn.forEach((element) => element.addEventListener("click", showClose));
@@ -103,15 +107,19 @@ skipButton.textContent = `Skip`;
 //Inserting the dom button at the welcome class
 Welcome.append(skipButton);
 
+const hideWelcomeMsg = function () {
+  clearTimeout(messageTimer);
+  overlay.classList.toggle("hidden");
+  Welcome.classList.toggle("hidden");
+  body.classList.toggle("inactive");
+  timerRunning = true;
+};
+
 //using the dom button for funtion
 document
   .querySelector(".Welcome-msg__btn")
-  .addEventListener("click", function () {
-    clearTimeout(messageTimer);
-    overlay.classList.toggle("hidden");
-    Welcome.classList.toggle("hidden");
-    body.classList.toggle("inactive");
-  });
+  .addEventListener("click", hideWelcomeMsg);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 //SMOOTH SCROLLING FOR NAV LINKS
