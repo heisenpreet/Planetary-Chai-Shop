@@ -48,13 +48,27 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
 .fade-in-from-0 {
   opacity: 0;
   transform: translateX(-10rem);
+
+  @include respond(phone) {
+    opacity: 1;
+    transform: none;
+  }
 }
 .fade-in-from-1 {
   opacity: 0;
   transform: translateX(10rem);
+  @include respond(phone) {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .fade-in-up {
-  // opacity: 0;
+  opacity: 0;
   transform: translateY(7rem);
+
+  @include respond(phone) {
+    opacity: 1;
+    transform: none;
+  }
 }

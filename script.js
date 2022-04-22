@@ -247,7 +247,6 @@ const revealSection = function (entrires, observer) {
 
   // const classToRemove = [...entry.target.classList].pop();
   // entry.target.classList.remove(classToRemove);
-
   drinks.forEach((section) => {
     const classToRemove = [...section.classList].pop();
     section.classList.remove(classToRemove);
@@ -260,8 +259,8 @@ const drinksObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.15,
 });
+drinksObserver.observe(drinks[0]);
 drinks.forEach((section, key) => {
-  drinksObserver.observe(section);
   section.classList.add(`fade-in-from-${key}`);
 });
 
@@ -280,6 +279,7 @@ const sectionRevel = function (entrires, observer) {
     }
   });
   A += 2;
+
   observer.unobserve(entry.target);
 };
 const spicyObserver = new IntersectionObserver(sectionRevel, {
