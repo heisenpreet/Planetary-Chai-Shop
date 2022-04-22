@@ -1,5 +1,6 @@
 .navbar {
   width: 100vw;
+
   display: flex;
   position: fixed;
   top: 0;
@@ -10,6 +11,7 @@
   align-items: center;
   opacity: 80%;
   transition: all 800ms;
+  transition-timing-function: ease-in;
   @include respond(phone) {
     gap: 4.5rem;
   }
@@ -18,7 +20,7 @@
   }
 
   &__logo {
-    font-size: 8rem;
+    font-size: 7.5rem;
     color: $color-primary;
     fill: $color-primary;
     @include respond(phone) {

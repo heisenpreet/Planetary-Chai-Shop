@@ -5,6 +5,10 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin transitionFx {
+  transition: transform 1s, opacity 1s;
+  transition-timing-function: ease;
+}
 //media query manager
 
 // 0 - 600    :phone

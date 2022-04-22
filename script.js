@@ -232,3 +232,62 @@ const obsOptions = {
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(tabbed);
+
+///////////////////////////////////////
+///////////////////////////////////////
+//Revealing elements on scroll , intersection API
+///////////////////////////////////////
+///////////////////////////////////////
+const drinks = document.querySelectorAll(".drink");
+
+const revealSection = function (entrires, observer) {
+  const [entry] = entrires;
+
+  if (!entry.isIntersecting) return;
+
+  // const classToRemove = [...entry.target.classList].pop();
+  // entry.target.classList.remove(classToRemove);
+
+  drinks.forEach((section) => {
+    const classToRemove = [...section.classList].pop();
+    section.classList.remove(classToRemove);
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const drinksObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+drinks.forEach((section, key) => {
+  drinksObserver.observe(section);
+  section.classList.add(`fade-in-from-${key}`);
+});
+
+//another section
+
+const spicy = document.querySelectorAll(".spicy");
+let A = 1; //for the loop over class
+const sectionRevel = function (entrires, observer) {
+  const [entry] = entrires;
+
+  if (!entry.isIntersecting) return;
+
+  spicy.forEach((section, key) => {
+    if (key <= A) {
+      section.classList.remove("fade-in-up");
+    }
+  });
+  A += 2;
+  observer.unobserve(entry.target);
+};
+const spicyObserver = new IntersectionObserver(sectionRevel, {
+  root: null,
+  threshold: 0.15,
+});
+
+spicy.forEach((section) => {
+  section.classList.add("fade-in-up");
+  spicyObserver.observe(section);
+});

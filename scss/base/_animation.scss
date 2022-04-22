@@ -43,3 +43,18 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
     transform: translate(0);
   }
 }
+//Intersection fade up classes for section
+
+.fade-in-from-0 {
+  opacity: 0;
+  transform: translateX(-10rem);
+}
+.fade-in-from-1 {
+  opacity: 0;
+  transform: translateX(10rem);
+}
+
+.fade-in-up {
+  // opacity: 0;
+  transform: translateY(7rem);
+}

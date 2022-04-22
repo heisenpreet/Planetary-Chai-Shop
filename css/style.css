@@ -78,6 +78,17 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
     opacity: 1;
     transform: translate(0); } }
 
+.fade-in-from-0 {
+  opacity: 0;
+  transform: translateX(-10rem); }
+
+.fade-in-from-1 {
+  opacity: 0;
+  transform: translateX(10rem); }
+
+.fade-in-up {
+  transform: translateY(7rem); }
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -308,6 +319,8 @@ body {
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: min-content max-content;
   justify-content: center;
+  transition: transform 1s, opacity 1s;
+  transition-timing-function: ease;
   padding-top: 3rem;
   padding-bottom: 3rem; }
   @media (max-width: 37.5em) {
@@ -331,64 +344,66 @@ body {
     .drink__btn:hover {
       color: #630a10 !important; }
 
-.spicy__img {
-  width: 100%; }
-  .spicy__img-1 {
-    grid-column: 1/18;
-    grid-row: 4/4; }
-    @media (max-width: 37.5em) {
-      .spicy__img-1 {
-        grid-column: 1/-1;
-        grid-row: 7/7; } }
-  .spicy__img-2 {
-    grid-column: -18/-1;
-    grid-row: 5/5; }
-    @media (max-width: 37.5em) {
-      .spicy__img-2 {
-        grid-column: 1/-1;
-        grid-row: 9/9; } }
-  .spicy__img-3 {
-    grid-column: 1/18;
-    grid-row: 6/6; }
-    @media (max-width: 37.5em) {
-      .spicy__img-3 {
-        grid-column: 1/-1;
-        grid-row: 11/11; } }
-
-.spicy__content {
-  grid-column: 18/-1;
-  grid-row: 4/4;
-  background-color: #face7f;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  .spicy__content-1 {
+.spicy {
+  transition: transform 1s, opacity 1s;
+  transition-timing-function: ease; }
+  .spicy__img {
+    width: 100%; }
+    .spicy__img-1 {
+      grid-column: 1/18;
+      grid-row: 4/4; }
+      @media (max-width: 37.5em) {
+        .spicy__img-1 {
+          grid-column: 1/-1;
+          grid-row: 7/7; } }
+    .spicy__img-2 {
+      grid-column: -18/-1;
+      grid-row: 5/5; }
+      @media (max-width: 37.5em) {
+        .spicy__img-2 {
+          grid-column: 1/-1;
+          grid-row: 9/9; } }
+    .spicy__img-3 {
+      grid-column: 1/18;
+      grid-row: 6/6; }
+      @media (max-width: 37.5em) {
+        .spicy__img-3 {
+          grid-column: 1/-1;
+          grid-row: 11/11; } }
+  .spicy__content {
     grid-column: 18/-1;
-    grid-row: 4/4; }
+    grid-row: 4/4;
+    background-color: #face7f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .spicy__content-1 {
+      grid-column: 18/-1;
+      grid-row: 4/4; }
+      @media (max-width: 37.5em) {
+        .spicy__content-1 {
+          grid-column: 1/-1;
+          grid-row: 8/8; } }
+    .spicy__content-2 {
+      grid-column: 1/-18;
+      grid-row: 5/5; }
+      @media (max-width: 37.5em) {
+        .spicy__content-2 {
+          grid-column: 1/-1;
+          grid-row: 10/10; } }
+    .spicy__content-3 {
+      grid-column: 18/-1;
+      grid-row: 6/6; }
+      @media (max-width: 37.5em) {
+        .spicy__content-3 {
+          grid-column: 1/-1;
+          grid-row: 12/12; } }
     @media (max-width: 37.5em) {
-      .spicy__content-1 {
-        grid-column: 1/-1;
-        grid-row: 8/8; } }
-  .spicy__content-2 {
-    grid-column: 1/-18;
-    grid-row: 5/5; }
-    @media (max-width: 37.5em) {
-      .spicy__content-2 {
-        grid-column: 1/-1;
-        grid-row: 10/10; } }
-  .spicy__content-3 {
-    grid-column: 18/-1;
-    grid-row: 6/6; }
-    @media (max-width: 37.5em) {
-      .spicy__content-3 {
-        grid-column: 1/-1;
-        grid-row: 12/12; } }
-  @media (max-width: 37.5em) {
-    .spicy__content {
-      padding: 3rem 0; } }
-  .spicy__content h2,
-  .spicy__content p {
-    color: #630a10 !important; }
+      .spicy__content {
+        padding: 3rem 0; } }
+    .spicy__content h2,
+    .spicy__content p {
+      color: #630a10 !important; }
 
 .tabbed {
   height: 100vh;
@@ -517,14 +532,15 @@ body {
   justify-content: start;
   align-items: center;
   opacity: 80%;
-  transition: all 800ms; }
+  transition: all 800ms;
+  transition-timing-function: ease-in; }
   @media (max-width: 37.5em) {
     .navbar {
       gap: 4.5rem; } }
   .navbar:hover {
     opacity: 100%; }
   .navbar__logo {
-    font-size: 8rem;
+    font-size: 7.5rem;
     color: #630a10;
     fill: #630a10; }
     @media (max-width: 37.5em) {

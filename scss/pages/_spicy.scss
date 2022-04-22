@@ -1,4 +1,6 @@
 .spicy {
+  @include transitionFx;
+
   &__img {
     width: 100%;
     &-1 {

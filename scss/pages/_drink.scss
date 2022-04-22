@@ -21,7 +21,7 @@
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: min-content max-content;
   justify-content: center;
-
+  @include transitionFx;
   padding-top: 3rem;
   padding-bottom: 3rem;
   @include respond(phone) {
