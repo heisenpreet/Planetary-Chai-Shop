@@ -291,3 +291,30 @@ spicy.forEach((section) => {
   section.classList.add("fade-in-up");
   spicyObserver.observe(section);
 });
+///////////////////////////////////////
+///////////////////////////////////////
+//Lazy loading images
+///////////////////////////////////////
+///////////////////////////////////////
+
+const imgTarget = document.querySelectorAll("img[data-src]");
+const loadImg = function (entrires, observer) {
+  const [entry] = entrires;
+  if (!entry.isIntersecting) return;
+
+  //Replace the src with data-src
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("img-blur");
+  });
+
+  observer.unobserve(entry.target);
+};
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: "200px",
+});
+
+imgTarget.forEach((img) => imgObserver.observe(img));

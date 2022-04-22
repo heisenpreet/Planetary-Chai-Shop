@@ -72,3 +72,11 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
     transform: none;
   }
 }
+img {
+  transition: all 500ms;
+  transition-timing-function: ease;
+}
+.img-blur {
+  filter: blur(0.8rem);
+  opacity: 70%;
+}
