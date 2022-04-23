@@ -1,4 +1,6 @@
 .menu {
+  overflow: hidden;
+
   grid-column: 3/14;
   grid-row: 8/8;
   @include respond(phone) {
@@ -17,6 +19,7 @@
     width: 100%;
     border-radius: 50px;
     padding: 2rem;
+    overflow-x: hidden;
   }
 
   &__btn {

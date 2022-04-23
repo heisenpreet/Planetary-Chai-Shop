@@ -3,6 +3,7 @@
   grid-template-columns: repeat(40, 2.5%);
   grid-template-rows: repeat(8, min-content);
   row-gap: 0.1rem;
+  overflow: hidden;
 
   @include respond(phone) {
     grid-template-rows: min-content max-content min-content max-content min-content min-content min-content max-content min-content max-content min-content max-content min-content min-content; //14

@@ -39,7 +39,6 @@ body {
   box-sizing: border-box;
   background-color: #ebfff8;
   position: relative;
-  overflow-x: hidden;
   /* IMPORTANT A PADDING AROUND THE WHOLE BODY , ITS NOT A INHEIRT PROPERTY */ }
 
 ::selection {
@@ -226,7 +225,8 @@ body {
   display: grid;
   grid-template-columns: repeat(40, 2.5%);
   grid-template-rows: repeat(8, min-content);
-  row-gap: 0.1rem; }
+  row-gap: 0.1rem;
+  overflow: hidden; }
   @media (max-width: 37.5em) {
     .container {
       grid-template-rows: min-content max-content min-content max-content min-content min-content min-content max-content min-content max-content min-content max-content min-content min-content;
@@ -544,6 +544,7 @@ body {
         width: 35ch; } }
 
 .menu {
+  overflow: hidden;
   grid-column: 3/14;
   grid-row: 8/8;
   margin: 12rem 0;
@@ -560,7 +561,8 @@ body {
   .menu__img {
     width: 100%;
     border-radius: 50px;
-    padding: 2rem; }
+    padding: 2rem;
+    overflow-x: hidden; }
   .menu__btn {
     font-size: 5rem;
     color: #face7f;
