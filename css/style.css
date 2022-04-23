@@ -643,7 +643,7 @@ body {
       letter-spacing: 0.5px; }
       @media (max-width: 37.5em) {
         .signup__left h2 {
-          font-size: 2.7; } }
+          font-size: 2.9; } }
     .signup__left h3 {
       font-size: 1.4rem;
       text-transform: uppercase;
@@ -652,11 +652,14 @@ body {
       font-weight: 600; }
       @media (max-width: 37.5em) {
         .signup__left h3 {
-          font-size: 1.6rem; } }
+          font-size: 1.8rem; } }
     .signup__left p {
       font-size: 1.6rem;
       color: #343a40;
       margin-top: 2rem; }
+      @media (max-width: 37.5em) {
+        .signup__left p {
+          font-size: 2rem; } }
   .signup__right {
     grid-row: 1/1;
     grid-column: 5/-1;
