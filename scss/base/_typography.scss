@@ -71,6 +71,19 @@ body {
     font-size: 4rem;
   }
 }
+.heading-3 {
+  color: $color-primary;
+  font-family: "Grape Nuts", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  white-space: normal;
+  text-align: center;
+  text-shadow: 1px;
+  @include respond(tab-land) {
+    font-size: 4rem;
+  }
+}
 
 .para-1 {
   white-space: normal;

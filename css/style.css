@@ -171,6 +171,19 @@ body {
     .heading-2 {
       font-size: 4rem; } }
 
+.heading-3 {
+  color: #630a10;
+  font-family: "Grape Nuts", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  white-space: normal;
+  text-align: center;
+  text-shadow: 1px; }
+  @media (max-width: 75em) {
+    .heading-3 {
+      font-size: 4rem; } }
+
 .para-1 {
   white-space: normal;
   text-align: center;
@@ -571,6 +584,9 @@ body {
     transition-timing-function: ease;
     margin: auto 0;
     z-index: 10; }
+    @media (max-width: 37.5em) {
+      .menu__btn {
+        font-size: 6.5rem; } }
     .menu__btn:hover {
       opacity: 70%; }
     .menu__btn-left {
