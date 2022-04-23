@@ -12,7 +12,7 @@
     width: 90%;
   }
 
-  z-index: 20;
+  z-index: 50;
   background-color: #ffffff;
 
   border-radius: 2rem;
@@ -28,7 +28,7 @@
     top: 50%;
     left: 0%;
     transform: translate(10%, -50%);
-    z-index: 20;
+    z-index: 50;
 
     @include respond(phone) {
       top: 15%;
@@ -70,6 +70,7 @@
 
   &__form {
     margin: 0 auto;
+    z-index: 50;
     input {
       font-size: 1.8rem;
       font-weight: 300;

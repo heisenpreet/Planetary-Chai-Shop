@@ -325,35 +325,44 @@ imgTarget.forEach((img) => imgObserver.observe(img));
 ///////////////////////////////////////
 ///////////////////////////////////////
 
-const sliderMenu = document.querySelectorAll(".menu");
-const btnLeft = document.querySelector(".menu__btn-left");
-const btnRight = document.querySelector(".menu__btn-right");
+const drinksMenuSlider = function () {
+  const sliderMenu = document.querySelectorAll(".menu");
+  const btnLeft = document.querySelector(".menu__btn-left");
+  const btnRight = document.querySelector(".menu__btn-right");
 
-let currentSlide = 0;
-const maxSlides = sliderMenu.length - 2;
+  let currentSlide = 0;
+  const maxSlides = sliderMenu.length - 2;
 
-const slideTo = function (slide) {
-  sliderMenu.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-  );
+  const slideTo = function (slide) {
+    sliderMenu.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+  slideTo(0);
+  const nextSlide = function (e) {
+    e.preventDefault();
+    if (currentSlide === maxSlides) {
+      currentSlide = 0;
+    } else {
+      currentSlide++;
+    }
+    slideTo(currentSlide);
+  };
+  btnRight.addEventListener("click", nextSlide);
+  const prevSlide = function (e) {
+    e.preventDefault();
+    if (currentSlide === 0) {
+      currentSlide = maxSlides;
+    } else {
+      currentSlide--;
+    }
+    slideTo(currentSlide);
+  };
+  btnLeft.addEventListener("click", prevSlide);
+  // //keyboard events
+  // document.addEventListener("keydown", function (e) {
+  //   e.key === "ArrowLeft" && prevSlide();
+  //   e.key === "ArrowRight" && nextSlide();
+  // });
 };
-slideTo(0);
-
-btnRight.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (currentSlide === maxSlides) {
-    currentSlide = 0;
-  } else {
-    currentSlide++;
-  }
-  slideTo(currentSlide);
-});
-btnLeft.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (currentSlide === 0) {
-    currentSlide = maxSlides;
-  } else {
-    currentSlide--;
-  }
-  slideTo(currentSlide);
-});
+drinksMenuSlider();
