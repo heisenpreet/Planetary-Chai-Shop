@@ -1,0 +1,53 @@
+.menu {
+  grid-column: 3/14;
+  grid-row: 8/8;
+  @include respond(phone) {
+    grid-column: 3/39;
+    grid-row: 14/14;
+  }
+  margin: 12rem 0;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  transition: all 1s;
+  transition-timing-function: ease;
+
+  &__img {
+    width: 100%;
+    border-radius: 50px;
+    padding: 2rem;
+  }
+
+  &__btn {
+    font-size: 5rem;
+    color: $color-cream-dark;
+    opacity: 100%;
+    transition: all 500ms;
+    transition-timing-function: ease;
+
+    &:hover {
+      opacity: 70%;
+    }
+    margin: auto 0;
+    z-index: 10;
+    &-left {
+      grid-row: 8/8;
+      grid-column: 1/-1;
+      @include respond(phone) {
+        grid-row: 14/14;
+      }
+      margin-right: auto;
+      margin-left: 2rem;
+    }
+    &-right {
+      grid-row: 8/8;
+      grid-column: 1/-1;
+      @include respond(phone) {
+        grid-row: 14/14;
+      }
+      margin-right: 2rem;
+      margin-left: auto;
+    }
+  }
+}

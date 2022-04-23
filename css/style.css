@@ -39,6 +39,7 @@ body {
   box-sizing: border-box;
   background-color: #ebfff8;
   position: relative;
+  overflow-x: hidden;
   /* IMPORTANT A PADDING AROUND THE WHOLE BODY , ITS NOT A INHEIRT PROPERTY */ }
 
 ::selection {
@@ -224,11 +225,11 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(40, 2.5%);
-  grid-template-rows: repeat(7, min-content);
+  grid-template-rows: repeat(8, min-content);
   row-gap: 0.1rem; }
   @media (max-width: 37.5em) {
     .container {
-      grid-template-rows: min-content max-content min-content max-content min-content min-content min-content max-content min-content max-content min-content max-content min-content;
+      grid-template-rows: min-content max-content min-content max-content min-content min-content min-content max-content min-content max-content min-content max-content min-content min-content;
       row-gap: 0; } }
 
 .hero-img {
@@ -541,6 +542,51 @@ body {
     @media (max-width: 37.5em) {
       .tabbed__text p {
         width: 35ch; } }
+
+.menu {
+  grid-column: 3/14;
+  grid-row: 8/8;
+  margin: 12rem 0;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  transition: all 1s;
+  transition-timing-function: ease; }
+  @media (max-width: 37.5em) {
+    .menu {
+      grid-column: 3/39;
+      grid-row: 14/14; } }
+  .menu__img {
+    width: 100%;
+    border-radius: 50px;
+    padding: 2rem; }
+  .menu__btn {
+    font-size: 5rem;
+    color: #face7f;
+    opacity: 100%;
+    transition: all 500ms;
+    transition-timing-function: ease;
+    margin: auto 0;
+    z-index: 10; }
+    .menu__btn:hover {
+      opacity: 70%; }
+    .menu__btn-left {
+      grid-row: 8/8;
+      grid-column: 1/-1;
+      margin-right: auto;
+      margin-left: 2rem; }
+      @media (max-width: 37.5em) {
+        .menu__btn-left {
+          grid-row: 14/14; } }
+    .menu__btn-right {
+      grid-row: 8/8;
+      grid-column: 1/-1;
+      margin-right: 2rem;
+      margin-left: auto; }
+      @media (max-width: 37.5em) {
+        .menu__btn-right {
+          grid-row: 14/14; } }
 
 .navbar {
   width: 100vw;
