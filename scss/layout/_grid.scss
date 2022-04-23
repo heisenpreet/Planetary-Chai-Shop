@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(40, 2.5%);
-  grid-template-rows: repeat(9, min-content);
+  grid-template-rows: repeat(10, min-content);
   row-gap: 0.1rem;
   overflow: hidden;
 
