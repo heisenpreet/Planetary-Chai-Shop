@@ -652,14 +652,14 @@ body {
       font-weight: 600; }
       @media (max-width: 37.5em) {
         .signup__left h3 {
-          font-size: 1.8rem; } }
+          font-size: 2rem; } }
     .signup__left p {
       font-size: 1.6rem;
       color: #343a40;
       margin-top: 2rem; }
       @media (max-width: 37.5em) {
         .signup__left p {
-          font-size: 2rem; } }
+          font-size: 1.8rem; } }
   .signup__right {
     grid-row: 1/1;
     grid-column: 5/-1;
