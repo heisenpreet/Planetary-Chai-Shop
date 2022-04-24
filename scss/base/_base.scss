@@ -33,7 +33,11 @@ html {
 body {
   box-sizing: border-box;
   // padding: 3rem;
-  background-color: $color-white-honeydew-1;
+  background-image: radial-gradient(
+    circle 400px at 6.8% 8.3%,
+    rgba(255, 244, 169, 1) 0%,
+    rgba(255, 244, 234, 1) 100.2%
+  );
   position: relative;
 
   /* IMPORTANT A PADDING AROUND THE WHOLE BODY , ITS NOT A INHEIRT PROPERTY */

@@ -6,7 +6,7 @@
   overflow: hidden;
 
   @include respond(phone) {
-    grid-template-rows: min-content max-content min-content max-content min-content min-content min-content max-content min-content max-content min-content max-content min-content min-content min-content min-content; //16
+    grid-template-rows: min-content max-content min-content max-content min-content min-content min-content max-content min-content max-content min-content max-content min-content min-content min-content min-content min-content; //17
     row-gap: 0;
   }
 }
