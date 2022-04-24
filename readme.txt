@@ -1,9 +1,18 @@
-"watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "compile:sass": "node-sass sass/main.scss css/style-comp.css",
-    "concat:css": "concat -o css/style-concat.css css/icon-font.css css/style-comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style-concat.css -o css/style-prefix.css ",
-    "compress:css": "node-sass css/style-prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+This website was made as part of my personal portfolio. key features of this website are mentained below. All rights of this website's design are reserved to Harpreet Singh. Please feel free to have a look.
 
 
-    all the files needed for css build , copy paste json
+⭐ This website is made using HTML+CSS(SCSS)+JAVASCRIPT
+⭐ Complete Grid Layout design
+⭐ Always on top navigation bar
+⭐ Pop up window for signUp Forms
+⭐ Use of INTL API for weekdays and month
+⭐ Use of Event Delegation 
+⭐ Use of Intersection Observer API
+⭐ Sliding window animation 
+⭐ Tabbed Components
+⭐ Smooth scrolling 
+⭐ Animation using JAVASCRIPT for better performance 
+⭐ Lazy Loading Images for better performance 
+⭐ Use of better fonts styles and color-gradients across the page
+
+
