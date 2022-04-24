@@ -1,0 +1,46 @@
+.footer {
+  height: 20vh;
+  grid-column: 1/-1;
+  grid-row: 11/11;
+  padding: 3rem;
+  @include respond(phone) {
+    grid-row: 18/18;
+  }
+  background-color: $color-background;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: $color-primary;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $color-grey-dark;
+      font-size: 3.5rem;
+
+      &:hover {
+        color: $gunmetal;
+      }
+    }
+  }
+}
