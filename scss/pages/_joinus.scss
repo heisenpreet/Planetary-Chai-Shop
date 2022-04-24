@@ -55,16 +55,16 @@
       letter-spacing: 2px;
       transition: all 800ms;
       transition-timing-function: ease;
-      text-shadow: -0.1px -0.1px 0 #000, 0.1px -0.1px 0 #000,
-        -0.1px 0.1px 0 #000, 0.1px 0.1px 0 #000;
+
       padding: 0.8rem 1rem;
       border-radius: 10rem;
       margin-left: -0.8rem;
+      color: red;
+      background-color: hsla(0, 0%, 100%, 0.69);
+      text-shadow: none;
 
       &:hover {
-        color: red;
         background-color: hsla(0, 0%, 100%, 0.811);
-        text-shadow: none;
       }
     }
   }
