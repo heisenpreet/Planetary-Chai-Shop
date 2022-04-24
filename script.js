@@ -140,6 +140,15 @@ navbar.addEventListener("click", function (e) {
   }
 });
 
+//smooth scrolling for footer button without event delegation as its a lone element
+
+const footerbtn = document.querySelector(".footerbtn");
+footerbtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  document
+    .querySelector(e.target.getAttribute("href"))
+    .scrollIntoView({ behavior: "smooth" });
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 //Tabbed Component
@@ -342,7 +351,7 @@ const drinksMenuSlider = function () {
   const nextSlide = function (e) {
     e.preventDefault();
     if (currentSlide === maxSlides) {
-      currentSlide = 0;
+      currentSlide -= 3;
     } else {
       currentSlide++;
     }
@@ -352,7 +361,7 @@ const drinksMenuSlider = function () {
   const prevSlide = function (e) {
     e.preventDefault();
     if (currentSlide === 0) {
-      currentSlide = maxSlides;
+      currentSlide += 3;
     } else {
       currentSlide--;
     }
